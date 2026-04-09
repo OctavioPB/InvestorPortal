@@ -1,4 +1,4 @@
-namespace PurchaserPortal1.Models
+namespace InvestorPortal.Models
 {
     public class Project
     {

@@ -1,7 +1,7 @@
 using System;
 using System.Web.UI;
 
-namespace PurchaserPortal1
+namespace InvestorPortal
 {
     public partial class Logout : Page
     {

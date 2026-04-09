@@ -1,7 +1,7 @@
 using System.Configuration;
 using System.Data.SqlClient;
 
-namespace PurchaserPortal1.Data
+namespace InvestorPortal.Data
 {
     /// <summary>
     /// Provides a SqlConnection from the InvestorPortalDB connection string.

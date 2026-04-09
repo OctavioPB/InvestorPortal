@@ -1,7 +1,7 @@
 using System;
 using System.Security.Cryptography;
 
-namespace PurchaserPortal1.Data
+namespace InvestorPortal.Data
 {
     /// <summary>
     /// PBKDF2-SHA256 password hashing (100 000 iterations, 32-byte key).

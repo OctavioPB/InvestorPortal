@@ -2,9 +2,9 @@ using System;
 using System.Configuration;
 using System.Drawing;
 using System.Web.UI;
-using PurchaserPortal1.Data;
+using InvestorPortal.Data;
 
-namespace PurchaserPortal1
+namespace InvestorPortal
 {
     public partial class Login : Page
     {

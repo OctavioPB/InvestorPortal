@@ -1,17 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
-namespace PurchaserPortal1
+namespace InvestorPortal
 {
     public partial class SiteMaster : MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            var role = Session["Role"]?.ToString();
+            pnlAdminNav.Visible     = (role == "Admin");
+            pnlPurchaserNav.Visible = (role != "Admin");
         }
     }
 }

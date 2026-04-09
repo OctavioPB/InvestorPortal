@@ -1,6 +1,6 @@
 using System;
 
-namespace PurchaserPortal1
+namespace InvestorPortal
 {
     /// <summary>
     /// Base page for admin-only pages.

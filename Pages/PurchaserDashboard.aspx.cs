@@ -1,17 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+using System;
+using InvestorPortal.Data;
 
-namespace PurchaserPortal1
+namespace InvestorPortal
 {
     public partial class PurchaserDashboard : BasePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            name.Text = Session["Name"].ToString();
+            if (!IsPostBack)
+            {
+                name.Text = Session["Name"].ToString();
+                LoadSummary();
+            }
+        }
+
+        private void LoadSummary()
+        {
+            if (Session["UserId"] == null) return;
+            int userId = (int)Session["UserId"];
+
+            var s = UserProjectRepository.GetSummary(userId);
+
+            lblPortfolioSize.Text = string.Format("{0:N0} $", s.PortfolioSize);
+            lblAmountPaid.Text    = string.Format("{0:N0} $", s.AmountPaid);
+            lblAmountDue.Text     = string.Format("{0:N0} $", s.AmountDue);
+            lblProjectCount.Text  = string.Format("{0} Project{1}", s.ProjectCount,
+                                                  s.ProjectCount == 1 ? "" : "s");
         }
     }
 }

@@ -1,8 +1,8 @@
 using System;
 using System.Web.UI.WebControls;
-using PurchaserPortal1.Data;
+using InvestorPortal.Data;
 
-namespace PurchaserPortal1
+namespace InvestorPortal
 {
     public partial class PurchaserPortal : BasePage
     {
@@ -11,8 +11,11 @@ namespace PurchaserPortal1
             if (!IsPostBack)
             {
                 name.Text = Session["Name"].ToString();
+
                 rptProjects.DataSource = ProjectRepository.GetAvailable();
                 rptProjects.DataBind();
+
+                LoadAlerts();
             }
         }
 
@@ -33,6 +36,16 @@ namespace PurchaserPortal1
             Session["bType"]        = project.BusinessType;
 
             Response.Redirect("~/Pages/PurchaseForm.aspx");
+        }
+
+        private void LoadAlerts()
+        {
+            if (Session["UserId"] == null) return;
+            int userId = (int)Session["UserId"];
+
+            var active = NotificationRepository.GetActive(userId);
+            pnlPaymentAlert.Visible  = active.Contains(NotificationRepository.PaymentPending);
+            pnlDocumentAlert.Visible = active.Contains(NotificationRepository.DocumentPending);
         }
     }
 }

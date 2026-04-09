@@ -1,0 +1,76 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="PurchaserPortal1.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <link href="~/Content/opb-brand.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server" />
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position:fixed; width:100%; z-index:1;">
+        <a class="navbar-brand" href="<%= ResolveUrl("~/Pages/PurchaserPortal.aspx") %>">OPB Capital</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain"
+                aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMain">
+
+            <%-- Purchaser navigation --%>
+            <asp:Panel ID="pnlPurchaserNav" runat="server" CssClass="navbar-nav mr-auto" RenderAs="ul">
+                <li class="nav-item">
+                    <a class="nav-link" href="<%= ResolveUrl("~/Pages/PurchaserPortal.aspx") %>">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<%= ResolveUrl("~/Pages/PurchaserDashboard.aspx") %>">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<%= ResolveUrl("~/Pages/Projects.aspx") %>">Projects</a>
+                </li>
+            </asp:Panel>
+
+            <%-- Admin navigation --%>
+            <asp:Panel ID="pnlAdminNav" runat="server" CssClass="navbar-nav mr-auto" RenderAs="ul">
+                <li class="nav-item">
+                    <a class="nav-link" href="<%= ResolveUrl("~/Pages/AdminView.aspx") %>">Admin Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<%= ResolveUrl("~/Pages/Projects.aspx") %>">Projects</a>
+                </li>
+            </asp:Panel>
+
+            <span class="navbar-text">
+                OPB Capital &nbsp;|&nbsp;
+                <a href="<%= ResolveUrl("~/Pages/Logout.aspx") %>" class="nav-link d-inline p-0" style="color:inherit;">Log Out</a>
+            </span>
+        </div>
+    </nav>
+
+    <form id="masterForm" runat="server">
+
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
+        <footer>
+            <hr />
+            &nbsp;&nbsp;
+            <asp:ImageButton ID="ImageButton1" runat="server"
+                             PostBackUrl="https://www.facebook.com/Greenpacecapital/"
+                             ImageUrl="~/Images/facebook.png" Style="width:25px;" />
+            &nbsp;&nbsp;
+            <asp:ImageButton ID="ImageButton2" runat="server"
+                             PostBackUrl="https://www.linkedin.com/company/opbcapital"
+                             ImageUrl="~/Images/linkedin.png" Style="width:25px;" />
+            <br />
+            <p>&copy; <%: DateTime.Now.Year %> - OPB Capital</p>
+        </footer>
+
+    </form>
+
+    <asp:ContentPlaceHolder ID="scripts" runat="server" />
+
+</body>
+</html>

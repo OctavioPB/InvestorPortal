@@ -1,158 +1,105 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PurchaserPortal.aspx.cs" Inherits="PurchaserPortal1.PurchaserPortal" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PurchaserPortal.aspx.cs"
+         Inherits="InvestorPortal.PurchaserPortal" MasterPageFile="~/Site.Master" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <%--<link href="Content/bootstrap2.css" rel="stylesheet" />--%>
-    <%--<link href="Content/deskapp2.css" rel="stylesheet" />--%>
-    <link href="~/Content/style.css" rel="stylesheet" />
-    <link href="~/Content/opb-brand.css" rel="stylesheet" />
+<asp:Content ID="head" ContentPlaceHolderID="head" runat="server">
     <title>OPB Capital — Mi Portal</title>
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position:fixed; width:100%; z-index: +1;">
-  <a class="navbar-brand" href="PurchaserPortal.aspx">OPB Capital</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarText">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="PurchaserPortal.aspx">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="PurchaserDashboard.aspx">Dashboard</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="Projects.aspx">Projects</a>
-      </li>
-    </ul>
-    <span class="navbar-text">
-      OPB Capital &nbsp;|&nbsp;
-      <a href="Logout.aspx" class="nav-link d-inline p-0" style="color:inherit;">Log Out</a>
-    </span>
-  </div>
-</nav>
-    <form id="form1" runat="server">
+</asp:Content>
 
-<div class="alert alert-danger" role="alert" style="position:fixed; width:30%; top: 55px;
-  left: 0;
-  right: 0;
-  z-index: +1;" >
-  You have a pending payment
-</div>
-<div class="alert alert-warning" role="alert" style="position:absolute; width:30%; top: 105px;">
-  You have a pending document to upload
-</div>
-        <%--Inicio--%>
-        <%--Carousel--%>
-<div class="container" style="text-align:center; align-content:center; align-self:center; text-align:center">
-    <br /><br />
-    <img src="../Images/GPC_logo_black.png" class="img-fluid" style="max-height:180px"/>
+<asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" runat="server">
+
+<asp:Panel ID="pnlPaymentAlert" runat="server" Visible="false"
+    CssClass="alert alert-danger"
+    style="position:fixed; width:30%; top:55px; left:0; right:0; z-index:1;">
+    You have a pending payment.
+</asp:Panel>
+<asp:Panel ID="pnlDocumentAlert" runat="server" Visible="false"
+    CssClass="alert alert-warning"
+    style="position:absolute; width:30%; top:105px;">
+    You have a pending document to upload.
+</asp:Panel>
+
+<div class="container" style="text-align:center; padding-top:90px;">
+    <img src="../Images/GPC_logo_black.png" class="img-fluid" style="max-height:180px" />
     <h2>Welcome <asp:Label ID="name" runat="server" Text=""></asp:Label></h2><br />
 </div>
-        <%--Carousel End--%>
-        <%--Cards--%>
 
-        <div class="container" style="max-width:75%; align-content:center; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); align-self:center; padding-top:25px;">
-<div class="alert alert-success" style="text-align:center;" <%--style="padding-bottom:0px"--%>>
-  <strong>New projects are available for you</strong> Take action before someone else take these deals.<br />
-</div>
-            <div class="card-group">
-  <asp:Repeater ID="rptProjects" runat="server" OnItemCommand="rptProjects_ItemCommand">
-    <ItemTemplate>
-      <div class="card">
-        <br />
-        <img src='<%# "../Images/" + Eval("ImageUrl") %>'
-             class="card-img-top"
-             style="width:400px; height:200px; text-align:center; align-items:center; align-self:center;" />
-        <div class="card-body">
-          <h5 class="card-title" style="text-align:center;">Project <%# Eval("ProjectId") %></h5>
-          <p class="card-text">
-            <b>Project Name:</b> <%# Eval("Name") %><br />
-            <b>Project Type:</b> <%# Eval("DealType") %><br />
-            <b>Location:</b> <%# Eval("Location") %><br />
-            <b>ITC Value:</b> <%# string.Format("{0:N0}", Eval("ITCValue")) %> $<br />
-          </p>
-          <div style="text-align:center;">
-            <asp:Button ID="btnGetProject" runat="server"
-                        Text="Get It"
-                        CommandName="Select"
-                        CommandArgument='<%# Eval("ProjectId") %>'
-                        style="background-color:#003366; color:#FFFFFF; text-align:center; font-weight:bold"
-                        class="btn btn-default" />
-          </div>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">Last updated <%: DateTime.Today.ToShortDateString() %></small>
-        </div>
-      </div>
-    </ItemTemplate>
-  </asp:Repeater>
-</div>
-    <%--Cards end--%>
-            <br />
-            <br />
-                <div class="row" style="text-align:center;">
-        <div class="col-md-4" style="text-align: center;">
+<div class="container" style="max-width:75%; align-content:center; box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19); padding-top:25px;">
+    <div class="alert alert-success" style="text-align:center;">
+        <strong>New projects are available for you</strong> Take action before someone else takes these deals.<br />
+    </div>
+
+    <div class="card-group">
+        <asp:Repeater ID="rptProjects" runat="server" OnItemCommand="rptProjects_ItemCommand">
+            <ItemTemplate>
+                <div class="card">
+                    <br />
+                    <img src='<%# "../Images/" + Eval("ImageUrl") %>'
+                         class="card-img-top"
+                         style="width:400px; height:200px; text-align:center; align-items:center; align-self:center;" />
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align:center;">Project <%# Eval("ProjectId") %></h5>
+                        <p class="card-text">
+                            <b>Project Name:</b> <%# Eval("Name") %><br />
+                            <b>Project Type:</b> <%# Eval("DealType") %><br />
+                            <b>Location:</b>     <%# Eval("Location") %><br />
+                            <b>ITC Value:</b>    <%# string.Format("{0:N0}", Eval("ITCValue")) %> $<br />
+                        </p>
+                        <div style="text-align:center;">
+                            <asp:Button ID="btnGetProject" runat="server"
+                                        Text="Get It"
+                                        CommandName="Select"
+                                        CommandArgument='<%# Eval("ProjectId") %>'
+                                        style="background-color:#003366; color:#FFFFFF; text-align:center; font-weight:bold"
+                                        class="btn btn-default" />
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Last updated <%: DateTime.Today.ToShortDateString() %></small>
+                    </div>
+                </div>
+            </ItemTemplate>
+        </asp:Repeater>
+    </div>
+
+    <br /><br />
+    <div class="row" style="text-align:center;">
+        <div class="col-md-4" style="text-align:center;">
             <h2>Investor Portal</h2>
-            <br/>
-            <img src="../Images/save-money.png" style="width: 20%;" />
-            <br/><br/>
+            <br />
+            <img src="../Images/save-money.png" style="width:20%;" />
+            <br /><br />
+            <p>Welcome to OPB Capital Investor Portal</p>
             <p>
-                Welcome to OPB Capital Investor Portal
+                <br />
+                <a class="btn btn-default" href="PurchaseForm.aspx"
+                   style="background-color:#003366; color:#FFFFFF; font-weight:bold">Upload documentation &raquo;</a>
             </p>
-            <p>
-                <br/>
-                <a class="btn btn-default" href="PurchaseForm.aspx" 
-                   style="background-color: #003366; color: #FFFFFF; font-weight: bold">Upload documentation &raquo;</a>
-            </p>
-            </div>
+        </div>
         <div class="col-md-4" style="text-align:center;">
             <h2>Get more Projects</h2>
-            <br/>
+            <br />
             <img src="../Images/dollar.png" style="width:20%;" />
-            <br/><br/>
+            <br /><br />
+            <p>Look into OPB Capital available projects for purchase</p>
+            <br />
             <p>
-                Look into OPB Capital available projects for purchase
-            </p>
-            <br>
-            <%--<img src="../Images/money.png" />--%>
-            <p>
-                <a class="btn btn-default" href="PurchaseForm.aspx" 
-                   style="background-color: #003366; color: #FFFFFF; font-weight: bold">See Aviable Projects &raquo;</a>
+                <a class="btn btn-default" href="Projects.aspx"
+                   style="background-color:#003366; color:#FFFFFF; font-weight:bold">See Available Projects &raquo;</a>
             </p>
         </div>
         <div class="col-md-4" style="text-align:center;">
             <h2>View important dates and messages</h2>
             <img src="../Images/calendar.png" style="width:20%;" />
-            <br/><br/>
-            <%--<img src="../Images/email.png" />--%>
+            <br /><br />
+            <p>You can now look into the status of your projects in real time</p>
+            <br />
             <p>
-                You can now look into the status of your projects in real time
-            </p>
-            <br/>
-            <p>
-                <a class="btn btn-default" href="PurchaserDashboard.aspx" 
-                   style="color: #FFFFFF; font-weight: bold; background-color: #003366">Learn more &raquo;</a>
+                <a class="btn btn-default" href="PurchaserDashboard.aspx"
+                   style="color:#FFFFFF; font-weight:bold; background-color:#003366">Learn more &raquo;</a>
             </p>
         </div>
     </div>
-        </div>
-        <br />
-        <br />
-                    <footer>
-                        <hr />
-                &nbsp;&nbsp;
-                <%--<img src="../Images/facebook.png" Style="width:25px;" />--%>
-                <asp:ImageButton ID="ImageButton1" runat="server" PostBackUrl="https://www.facebook.com/Greenpacecapital/" ImageUrl="~/Images/facebook.png" Style="width:25px;"  />
-                <%--<img src="../Images/linkedin.png" Style="width:25px;" />--%>
-                &nbsp;&nbsp;
-                <asp:ImageButton ID="ImageButton2" runat="server" PostBackUrl="https://www.linkedin.com/company/opbcapital" ImageUrl="~/Images/linkedin.png" Style="width:25px;"  />
-                <br />
-                <p>&copy; <%: DateTime.Now.Year %> - OPB Capital</p>
-            </footer>
-    </form>
-</body>
-</html>
+</div>
+<br /><br />
+
+</asp:Content>

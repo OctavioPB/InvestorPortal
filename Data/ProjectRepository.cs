@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
-using PurchaserPortal1.Models;
+using InvestorPortal.Models;
 
-namespace PurchaserPortal1.Data
+namespace InvestorPortal.Data
 {
     public static class ProjectRepository
     {
