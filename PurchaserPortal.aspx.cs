@@ -7,19 +7,12 @@ using System.Web.UI.WebControls;
 
 namespace PurchaserPortal1
 {
-    public partial class PurchaserPortal : System.Web.UI.Page
+    public partial class PurchaserPortal : BasePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            try
-            { 
-            name.Text = Session["Name"].ToString();
-            }
-            catch
-            {
-                Response.Write("<script>alert('You need to log in');</script>");
-                Server.Transfer("Login.aspx", true);
-            }
+            if (!IsPostBack)
+                name.Text = Session["Name"].ToString();
         }
 
         protected void Button1_Click(object sender, EventArgs e)

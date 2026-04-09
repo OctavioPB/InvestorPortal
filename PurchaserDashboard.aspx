@@ -29,7 +29,8 @@
       </li>
     </ul>
     <span class="navbar-text">
-      OPB Capital
+      OPB Capital &nbsp;|&nbsp;
+      <a href="Logout.aspx" class="nav-link d-inline p-0" style="color:inherit;">Log Out</a>
     </span>
   </div>
 </nav>

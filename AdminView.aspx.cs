@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace PurchaserPortal1
 {
-    public partial class AdminView : System.Web.UI.Page
+    public partial class AdminView : AdminBasePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

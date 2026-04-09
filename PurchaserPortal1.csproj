@@ -106,6 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminView.aspx" />
+    <Content Include="Logout.aspx" />
     <Content Include="Content\bootstrap2.css" />
     <Content Include="Content\deskapp.css" />
     <Content Include="Content\deskapp2.css" />
@@ -190,6 +191,12 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminBasePage.cs" />
+    <Compile Include="BasePage.cs" />
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="AdminView.aspx.cs">
       <DependentUpon>AdminView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
