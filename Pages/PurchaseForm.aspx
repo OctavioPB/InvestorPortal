@@ -5,10 +5,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>OPB Capital — Detalle de Proyecto</title>
-    <link href="Content/style.css" rel="stylesheet" />
-    <link href="Content/deskapp2.css" rel="stylesheet" />
-    <link href="Content/opb-brand.css" rel="stylesheet" />
-    <script src="Scripts/Deskapp/script.js"></script>
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <link href="~/Content/deskapp2.css" rel="stylesheet" />
+    <link href="~/Content/opb-brand.css" rel="stylesheet" />
+    <script src="~/Scripts/Deskapp/script.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position:fixed; width:100%; z-index: +1;">

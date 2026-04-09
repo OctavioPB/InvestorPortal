@@ -6,8 +6,8 @@
 <head runat="server">
     <%--<link href="Content/bootstrap2.css" rel="stylesheet" />--%>
     <%--<link href="Content/deskapp2.css" rel="stylesheet" />--%>
-    <link href="Content/style.css" rel="stylesheet" />
-    <link href="Content/opb-brand.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <link href="~/Content/opb-brand.css" rel="stylesheet" />
     <title>OPB Capital — Mi Portal</title>
 </head>
 <body>
@@ -49,7 +49,7 @@
         <%--Carousel--%>
 <div class="container" style="text-align:center; align-content:center; align-self:center; text-align:center">
     <br /><br />
-    <img src="Images/GPC_logo_black.png" class="img-fluid" style="max-height:180px"/>
+    <img src="../Images/GPC_logo_black.png" class="img-fluid" style="max-height:180px"/>
     <h2>Welcome <asp:Label ID="name" runat="server" Text=""></asp:Label></h2><br />
 </div>
         <%--Carousel End--%>
@@ -62,7 +62,7 @@
             <div class="card-group">
   <div class="card">
       <br />
-    <img src="Images/solar4.jpg" class="card-img-top" style="width:400px; height:200px; text-align:center; align-items:center; align-self:center;"/>
+    <img src="../Images/solar4.jpg" class="card-img-top" style="width:400px; height:200px; text-align:center; align-items:center; align-self:center;"/>
     <div class="card-body">
       <h5 class="card-title" style="text-align:center;">Project 485</h5>
       <p class="card-text">
@@ -81,7 +81,7 @@
   </div>
   <div class="card">
       <br />
-    <img src="Images/solar5.jpg" class="card-img-top" style="width:400px; height:200px; text-align:center; align-items:center; align-self:center;"/>
+    <img src="../Images/solar5.jpg" class="card-img-top" style="width:400px; height:200px; text-align:center; align-items:center; align-self:center;"/>
     <div class="card-body">
       <h5 class="card-title" style="text-align:center;">Project 462</h5>
       <p class="card-text">          
@@ -103,7 +103,7 @@
   </div>
   <div class="card">
       <br />
-    <img src="Images/solar6.jpg" class="card-img-top" style="width:400px; height:200px; text-align:center; align-items:center; align-self:center;"/>
+    <img src="../Images/solar6.jpg" class="card-img-top" style="width:400px; height:200px; text-align:center; align-items:center; align-self:center;"/>
     <div class="card-body">
       <h5 class="card-title" style="text-align:center;">Project 468</h5>
       <p class="card-text">
@@ -130,7 +130,7 @@
         <div class="col-md-4" style="text-align: center;">
             <h2>Investor Portal</h2>
             <br/>
-            <img src="Images/save-money.png" style="width: 20%;" />
+            <img src="../Images/save-money.png" style="width: 20%;" />
             <br/><br/>
             <p>
                 Welcome to OPB Capital Investor Portal
@@ -144,13 +144,13 @@
         <div class="col-md-4" style="text-align:center;">
             <h2>Get more Projects</h2>
             <br/>
-            <img src="Images/dollar.png" style="width:20%;" />
+            <img src="../Images/dollar.png" style="width:20%;" />
             <br/><br/>
             <p>
                 Look into OPB Capital available projects for purchase
             </p>
             <br>
-            <%--<img src="Images/money.png" />--%>
+            <%--<img src="../Images/money.png" />--%>
             <p>
                 <a class="btn btn-default" href="PurchaseForm.aspx" 
                    style="background-color: #003366; color: #FFFFFF; font-weight: bold">See Aviable Projects &raquo;</a>
@@ -158,9 +158,9 @@
         </div>
         <div class="col-md-4" style="text-align:center;">
             <h2>View important dates and messages</h2>
-            <img src="Images/calendar.png" style="width:20%;" />
+            <img src="../Images/calendar.png" style="width:20%;" />
             <br/><br/>
-            <%--<img src="Images/email.png" />--%>
+            <%--<img src="../Images/email.png" />--%>
             <p>
                 You can now look into the status of your projects in real time
             </p>
@@ -177,9 +177,9 @@
                     <footer>
                         <hr />
                 &nbsp;&nbsp;
-                <%--<img src="Images/facebook.png" Style="width:25px;" />--%>
+                <%--<img src="../Images/facebook.png" Style="width:25px;" />--%>
                 <asp:ImageButton ID="ImageButton1" runat="server" PostBackUrl="https://www.facebook.com/Greenpacecapital/" ImageUrl="~/Images/facebook.png" Style="width:25px;"  />
-                <%--<img src="Images/linkedin.png" Style="width:25px;" />--%>
+                <%--<img src="../Images/linkedin.png" Style="width:25px;" />--%>
                 &nbsp;&nbsp;
                 <asp:ImageButton ID="ImageButton2" runat="server" PostBackUrl="https://www.linkedin.com/company/opbcapital" ImageUrl="~/Images/linkedin.png" Style="width:25px;"  />
                 <br />

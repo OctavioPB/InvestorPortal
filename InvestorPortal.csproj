@@ -13,7 +13,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PurchaserPortal1</RootNamespace>
-    <AssemblyName>PurchaserPortal1</AssemblyName>
+    <AssemblyName>InvestorPortal</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -105,8 +105,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AdminView.aspx" />
-    <Content Include="Logout.aspx" />
+    <Content Include="Pages\AdminView.aspx" />
+    <Content Include="Pages\Login.aspx" />
+    <Content Include="Pages\Logout.aspx" />
+    <Content Include="Pages\PuchaserProjects.aspx" />
+    <Content Include="Pages\PurchaseForm.aspx" />
+    <Content Include="Pages\PurchaserDashboard.aspx" />
+    <Content Include="Pages\PurchaserPortal.aspx" />
+    <Content Include="Content\opb-brand.css" />
     <Content Include="Content\bootstrap2.css" />
     <Content Include="Content\deskapp.css" />
     <Content Include="Content\deskapp2.css" />
@@ -118,10 +124,7 @@
     <Content Include="Images\solar5.jpg" />
     <Content Include="Images\solar6.jpg" />
     <Content Include="Images\solar7.jpg" />
-    <Content Include="Projects.aspx" />
-    <Content Include="PuchaserProjects.aspx" />
-    <Content Include="PurchaseForm.aspx" />
-    <Content Include="PurchaserDashboard.aspx" />
+    <Content Include="Pages\Projects.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -151,8 +154,6 @@
     <Content Include="Images\save-money.png" />
     <Content Include="Images\stopwatch.png" />
     <Content Include="Images\upload.png" />
-    <Content Include="Login.aspx" />
-    <Content Include="PurchaserPortal.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\Deskapp\highcharts-more.js" />
@@ -191,65 +192,55 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminBasePage.cs" />
-    <Compile Include="BasePage.cs" />
-    <Compile Include="Logout.aspx.cs">
+    <Compile Include="Infrastructure\AdminBasePage.cs" />
+    <Compile Include="Infrastructure\BasePage.cs" />
+    <Compile Include="Pages\Logout.aspx.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AdminView.aspx.cs">
+    <Compile Include="Pages\AdminView.aspx.cs">
       <DependentUpon>AdminView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AdminView.aspx.designer.cs">
-      <DependentUpon>AdminView.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Projects.aspx.cs">
+    <Compile Include="Pages\Projects.aspx.cs">
       <DependentUpon>Projects.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Projects.aspx.designer.cs">
+    <Compile Include="Pages\Projects.aspx.designer.cs">
       <DependentUpon>Projects.aspx</DependentUpon>
     </Compile>
-    <Compile Include="PuchaserProjects.aspx.cs">
-      <DependentUpon>PuchaserProjects.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PuchaserProjects.aspx.designer.cs">
-      <DependentUpon>PuchaserProjects.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PurchaseForm.aspx.cs">
+    <Compile Include="Pages\PurchaseForm.aspx.cs">
       <DependentUpon>PurchaseForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="PurchaseForm.aspx.designer.cs">
+    <Compile Include="Pages\PurchaseForm.aspx.designer.cs">
       <DependentUpon>PurchaseForm.aspx</DependentUpon>
     </Compile>
-    <Compile Include="PurchaserDashboard.aspx.cs">
+    <Compile Include="Pages\PurchaserDashboard.aspx.cs">
       <DependentUpon>PurchaserDashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="PurchaserDashboard.aspx.designer.cs">
+    <Compile Include="Pages\PurchaserDashboard.aspx.designer.cs">
       <DependentUpon>PurchaserDashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Login.aspx.cs">
+    <Compile Include="Pages\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login.aspx.designer.cs">
+    <Compile Include="Pages\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PurchaserPortal.aspx.cs">
+    <Compile Include="Pages\PurchaserPortal.aspx.cs">
       <DependentUpon>PurchaserPortal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="PurchaserPortal.aspx.designer.cs">
+    <Compile Include="Pages\PurchaserPortal.aspx.designer.cs">
       <DependentUpon>PurchaserPortal.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">

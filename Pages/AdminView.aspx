@@ -4,9 +4,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link href="Content/style.css" rel="stylesheet" />
-    <link href="Content/opb-brand.css" rel="stylesheet" />
-    <script src="Scripts/Deskapp/script.js"></script>
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <link href="~/Content/opb-brand.css" rel="stylesheet" />
+    <script src="~/Scripts/Deskapp/script.js"></script>
     <title>OPB Capital — Administración</title>
 </head>
 <body>

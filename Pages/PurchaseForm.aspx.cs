@@ -23,7 +23,7 @@ namespace PurchaserPortal1
             }
             catch
             {
-                Response.Redirect("~/Login.aspx");
+                Response.Redirect("~/Pages/Login.aspx");
             }
 
         }

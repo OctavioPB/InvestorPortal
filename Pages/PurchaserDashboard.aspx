@@ -5,8 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <%--<link href="Content/deskapp2.css" rel="stylesheet" />--%>
-    <link href="Content/style.css" rel="stylesheet" />
-    <link href="Content/opb-brand.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <link href="~/Content/opb-brand.css" rel="stylesheet" />
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"/>
     <title>OPB Capital — Dashboard</title>
 </head>
@@ -175,9 +175,9 @@
 	</div>
     </form>
     
-    <script src="Scripts/Deskapp/script.js"></script>
-    <script src="Scripts/Deskapp/highcharts.js"></script>
-    <script src="Scripts/Deskapp/highcharts-more.js"></script>
+    <script src="../Scripts/Deskapp/script.js"></script>
+    <script src="../Scripts/Deskapp/highcharts.js"></script>
+    <script src="../Scripts/Deskapp/highcharts-more.js"></script>
 	<script type="text/javascript">
     Highcharts.chart('areaspline-chart', {
             chart: {

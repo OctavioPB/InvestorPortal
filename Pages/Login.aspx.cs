@@ -37,9 +37,9 @@ namespace PurchaserPortal1
             Session["Role"] = parts[1];
 
             if (parts[1] == "Admin")
-                Response.Redirect("~/AdminView.aspx");
+                Response.Redirect("~/Pages/AdminView.aspx");
             else
-                Response.Redirect("~/PurchaserPortal.aspx");
+                Response.Redirect("~/Pages/PurchaserPortal.aspx");
         }
     }
 }

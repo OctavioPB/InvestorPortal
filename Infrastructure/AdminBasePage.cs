@@ -14,7 +14,7 @@ namespace PurchaserPortal1
             base.OnPreLoad(e); // checks Session["Name"] first
 
             if (Session["Role"]?.ToString() != "Admin")
-                Response.Redirect("~/PurchaserPortal.aspx");
+                Response.Redirect("~/Pages/PurchaserPortal.aspx");
         }
     }
 }

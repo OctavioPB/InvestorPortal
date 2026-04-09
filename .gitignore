@@ -1,0 +1,38 @@
+## Visual Studio / MSBuild
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+## Build output
+bin/
+obj/
+[Bb]in/
+[Oo]bj/
+[Rr]elease/
+[Dd]ebug/
+
+## NuGet
+packages/
+*.nupkg
+!**/[Pp]ackages/build/
+
+## Publish output
+publish/
+dist/
+*.pubxml
+*.pubxml.user
+
+## ASP.NET WebForms
+App_Data/
+*.bak
+
+## OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+## Logs
+*.log

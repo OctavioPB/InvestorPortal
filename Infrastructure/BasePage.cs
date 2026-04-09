@@ -12,7 +12,7 @@ namespace PurchaserPortal1
         protected override void OnPreLoad(EventArgs e)
         {
             if (Session["Name"] == null)
-                Response.Redirect("~/Login.aspx");
+                Response.Redirect("~/Pages/Login.aspx");
 
             base.OnPreLoad(e);
         }

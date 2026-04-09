@@ -5,11 +5,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head runat="server">
-    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
     <title>OPB Capital — Iniciar Sesión</title>
-    <script src="Scripts/Deskapp/script.js"></script>
-    <link href="Content/style.css" rel="stylesheet" />
-    <link href="Content/opb-brand.css" rel="stylesheet" />
+    <script src="~/Scripts/Deskapp/script.js"></script>
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <link href="~/Content/opb-brand.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -17,7 +17,7 @@
         <br />
         <div class="container" style="max-width:75%; text-align:center; align-content:center; align-self:center; 
             background-color:lightgray; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border-radius: 20px; padding-bottom:35px;">
-            <img src="Images/GPC_logo_black.png" style="width:40%" />
+            <img src="../Images/GPC_logo_black.png" style="width:40%" />
             <br /> 
             <br />
             <asp:Label ID="Label1" runat="server" Text="USER" Font-Bold="True" Font-Size="X-Large"></asp:Label>
