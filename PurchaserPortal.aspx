@@ -7,11 +7,12 @@
     <%--<link href="Content/bootstrap2.css" rel="stylesheet" />--%>
     <%--<link href="Content/deskapp2.css" rel="stylesheet" />--%>
     <link href="Content/style.css" rel="stylesheet" />
-    <title></title>
+    <link href="Content/opb-brand.css" rel="stylesheet" />
+    <title>OPB Capital — Mi Portal</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position:fixed; width:100%; z-index: +1;">
-  <a class="navbar-brand" href="PurchaserPortal.aspx">Purchaser Portal</a>
+  <a class="navbar-brand" href="PurchaserPortal.aspx">OPB Capital</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -28,7 +29,7 @@
       </li>
     </ul>
     <span class="navbar-text">
-      GreenPACE Capital
+      OPB Capital
     </span>
   </div>
 </nav>
@@ -70,7 +71,7 @@
           <b>ITC Value:</b> 81,442 $<br />
       </p>
         <div style="text-align:center;">
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Get It" style="background-color: #205928; color: #FFFFFF; text-align:center; font-weight: bold" class="btn btn-default"/>
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Get It" style="background-color: #003366; color: #FFFFFF; text-align:center; font-weight: bold" class="btn btn-default"/>
     </div>
     </div>
     <div class="card-footer">
@@ -92,7 +93,7 @@
       </p>
 
         <div style="text-align:center;">
-        <asp:Button ID="Button2" runat="server" Text="Get It" style="background-color: #205928; color: #FFFFFF; text-align:center; font-weight: bold" class="btn btn-default" OnClick="Button2_Click" />
+        <asp:Button ID="Button2" runat="server" Text="Get It" style="background-color: #003366; color: #FFFFFF; text-align:center; font-weight: bold" class="btn btn-default" OnClick="Button2_Click" />
     </div>
     </div>  
     <div class="card-footer">
@@ -113,7 +114,7 @@
       </p>
 
         <div style="text-align:center;">
-        <asp:Button ID="Button3" runat="server" Text="Get It" style="background-color: #205928; color: #FFFFFF; text-align:center; font-weight: bold" class="btn btn-default" OnClick="Button3_Click"/>
+        <asp:Button ID="Button3" runat="server" Text="Get It" style="background-color: #003366; color: #FFFFFF; text-align:center; font-weight: bold" class="btn btn-default" OnClick="Button3_Click"/>
     </div>
         </div>
     <div class="card-footer">
@@ -126,17 +127,17 @@
             <br />
                 <div class="row" style="text-align:center;">
         <div class="col-md-4" style="text-align: center;">
-            <h2>Purchaser Portal</h2>
+            <h2>Investor Portal</h2>
             <br/>
             <img src="Images/save-money.png" style="width: 20%;" />
             <br/><br/>
             <p>
-                Welcome to GreenPACE Capital Purchaser Portal
+                Welcome to OPB Capital Investor Portal
             </p>
             <p>
                 <br/>
                 <a class="btn btn-default" href="PurchaseForm.aspx" 
-                   style="background-color: #205928; color: #FFFFFF; font-weight: bold">Upload documentation &raquo;</a>
+                   style="background-color: #003366; color: #FFFFFF; font-weight: bold">Upload documentation &raquo;</a>
             </p>
             </div>
         <div class="col-md-4" style="text-align:center;">
@@ -145,13 +146,13 @@
             <img src="Images/dollar.png" style="width:20%;" />
             <br/><br/>
             <p>
-                Look into GreenPACE Capital aviable projects for purchase
+                Look into OPB Capital available projects for purchase
             </p>
             <br>
             <%--<img src="Images/money.png" />--%>
             <p>
                 <a class="btn btn-default" href="PurchaseForm.aspx" 
-                   style="background-color: #205928; color: #FFFFFF; font-weight: bold">See Aviable Projects &raquo;</a>
+                   style="background-color: #003366; color: #FFFFFF; font-weight: bold">See Aviable Projects &raquo;</a>
             </p>
         </div>
         <div class="col-md-4" style="text-align:center;">
@@ -165,7 +166,7 @@
             <br/>
             <p>
                 <a class="btn btn-default" href="PurchaserDashboard.aspx" 
-                   style="color: #FFFFFF; font-weight: bold; background-color: #205928">Learn more &raquo;</a>
+                   style="color: #FFFFFF; font-weight: bold; background-color: #003366">Learn more &raquo;</a>
             </p>
         </div>
     </div>
@@ -179,9 +180,9 @@
                 <asp:ImageButton ID="ImageButton1" runat="server" PostBackUrl="https://www.facebook.com/Greenpacecapital/" ImageUrl="~/Images/facebook.png" Style="width:25px;"  />
                 <%--<img src="Images/linkedin.png" Style="width:25px;" />--%>
                 &nbsp;&nbsp;
-                <asp:ImageButton ID="ImageButton2" runat="server" PostBackUrl="https://www.linkedin.com/company/greenpacecapital" ImageUrl="~/Images/linkedin.png" Style="width:25px;"  />
+                <asp:ImageButton ID="ImageButton2" runat="server" PostBackUrl="https://www.linkedin.com/company/opbcapital" ImageUrl="~/Images/linkedin.png" Style="width:25px;"  />
                 <br />
-                <p>&copy; <%: DateTime.Now.Year %> - GreenPACE Capital</p>
+                <p>&copy; <%: DateTime.Now.Year %> - OPB Capital</p>
             </footer>
     </form>
 </body>

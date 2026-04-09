@@ -23,7 +23,7 @@ border: solid 1px #c1c1c1;
 {
 padding : 4px 2px;
 color: #fff;
-background: #205928;
+background: #003366;
 border-left: solid 1px #525252;
 font-size: 0.9em;
 text-align:center;
@@ -34,7 +34,7 @@ background: #fcfcfc;
 }
 .Grid .pgr 
 {
-background: #205928;
+background: #003366;
 }
 .Grid .pgr table 
 {
@@ -117,8 +117,8 @@ text-align:center;
     </address>
 
     <address>
-        <strong>Marketing:</strong>   <a href="mailto:Support@example.com">infot@greenpacecapital.com</a><br />
-        <strong>Support:</strong> <a href="mailto:Marketing@example.com">purchasers@greenpacecapital.com</a>
+        <strong>Marketing:</strong>   <a href="mailto:info@opbcapital.com">info@opbcapital.com</a><br />
+        <strong>Support:</strong> <a href="mailto:investors@opbcapital.com">investors@opbcapital.com</a>
     </address>
 </asp:Content>
 

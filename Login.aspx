@@ -6,9 +6,10 @@
 
 <head runat="server">
     <link href="Content/bootstrap.css" rel="stylesheet" />
-    <title></title>
+    <title>OPB Capital — Iniciar Sesión</title>
     <script src="Scripts/Deskapp/script.js"></script>
     <link href="Content/style.css" rel="stylesheet" />
+    <link href="Content/opb-brand.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -33,7 +34,7 @@
             <br />
             <br />
             <br />
-            <asp:Button ID="Button1" runat="server" CssClass="btn-lg" Text="Log in" style="color: #FFFFFF; font-weight: bold; background-color: #205928; border-radius:15px;" Height="74px" OnClick="Button1_Click" Width="167px" />
+            <asp:Button ID="Button1" runat="server" CssClass="btn-lg" Text="Log in" style="color: #FFFFFF; font-weight: bold; background-color: #003366; border-radius:15px;" Height="74px" OnClick="Button1_Click" Width="167px" />
             <br />
             <br />
             <br />

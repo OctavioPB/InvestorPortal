@@ -4,13 +4,15 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>OPB Capital — Detalle de Proyecto</title>
+    <link href="Content/style.css" rel="stylesheet" />
     <link href="Content/deskapp2.css" rel="stylesheet" />
+    <link href="Content/opb-brand.css" rel="stylesheet" />
     <script src="Scripts/Deskapp/script.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position:fixed; width:100%; z-index: +1;">
-  <a class="navbar-brand" href="PurchaserPortal.aspx">Purchaser Portal</a>
+  <a class="navbar-brand" href="PurchaserPortal.aspx">OPB Capital</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -27,7 +29,7 @@
       </li>
     </ul>
     <span class="navbar-text">
-      GreenPACE Capital
+      OPB Capital
     </span>
   </div>
 </nav>
@@ -139,7 +141,7 @@
 		<br />
 		<br />
 		<div class="container" style="max-width:75%; text-align:center; align-content:center; align-self:center;" >
-        <asp:Button ID="submit" runat="server" Text="Submit" style="text-align:center; width:65%; background-color: #205928; border-color:#084012" class="btn btn-primary btn-lg" />
+        <asp:Button ID="submit" runat="server" Text="Submit" style="text-align:center; width:65%; background-color: #003366; border-color:#002244" class="btn btn-primary btn-lg" />
 		</div>
 		<br /><br />
 	</div>

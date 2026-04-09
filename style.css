@@ -10,6 +10,13 @@ Author: Ankit Hingarajiya - DeskApp
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 :root {
+  /* OPB Capital Brand Colors */
+  --opb-primary:   #003366;
+  --opb-secondary: #C8982A;
+  --opb-dark:      #1C1C2E;
+  --opb-light:     #F4F6F9;
+  --opb-text:      #1C1C2E;
+
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -23,14 +30,14 @@ Author: Ankit Hingarajiya - DeskApp
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #007bff;
-  --secondary: #6c757d;
+  --primary: #003366;
+  --secondary: #C8982A;
   --success: #28a745;
   --info: #17a2b8;
   --warning: #ffc107;
   --danger: #dc3545;
-  --light: #f8f9fa;
-  --dark: #343a40;
+  --light: #F4F6F9;
+  --dark: #1C1C2E;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;

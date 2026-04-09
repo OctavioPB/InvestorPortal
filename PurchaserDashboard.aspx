@@ -6,12 +6,13 @@
 <head runat="server">
     <%--<link href="Content/deskapp2.css" rel="stylesheet" />--%>
     <link href="Content/style.css" rel="stylesheet" />
+    <link href="Content/opb-brand.css" rel="stylesheet" />
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"/>
-    <title></title>
+    <title>OPB Capital — Dashboard</title>
 </head>
 <body>
      <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position:fixed; width:100%; z-index: +1;">
-  <a class="navbar-brand" href="#">Purchaser Portal</a>
+  <a class="navbar-brand" href="#">OPB Capital</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -28,7 +29,7 @@
       </li>
     </ul>
     <span class="navbar-text">
-      GreenPACE Capital
+      OPB Capital
     </span>
   </div>
 </nav>

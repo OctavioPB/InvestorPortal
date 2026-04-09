@@ -5,12 +5,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link href="Content/style.css" rel="stylesheet" />
+    <link href="Content/opb-brand.css" rel="stylesheet" />
     <script src="Scripts/Deskapp/script.js"></script>
-    <title>Admin</title>
+    <title>OPB Capital — Administración</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position:fixed; width:100%; z-index: +1;">
-  <a class="navbar-brand" href="PurchaserPortal.aspx">Purchaser Portal</a>
+  <a class="navbar-brand" href="PurchaserPortal.aspx">OPB Capital</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>x
   </button>
@@ -27,7 +28,7 @@
       </li>
     </ul>
     <span class="navbar-text">
-      GreenPACE Capital
+      OPB Capital
     </span>
   </div>
 </nav>

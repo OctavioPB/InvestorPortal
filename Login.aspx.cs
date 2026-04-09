@@ -19,7 +19,7 @@ namespace PurchaserPortal1
             var contrasena = pass.Text;
             switch (usuario)
             {
-                case "eduardo@greenpacecapital.com":
+                case "eduardo@opbcapital.com":
                     if (contrasena == "emartinez")
                     {
                         Response.Write("<script>alert('Accepted');</script>");
@@ -31,7 +31,7 @@ namespace PurchaserPortal1
                         Response.Write("<script>alert('Wrong Password');</script>");
                     }
                     break;
-                case "andrew@greenpacecapital.com":
+                case "andrew@opbcapital.com":
                     if (contrasena == "agold")
                     {
                         Response.Write("<script>alert('Accepted');</script>");
@@ -43,7 +43,7 @@ namespace PurchaserPortal1
                         Response.Write("<script>alert('Wrong Password');</script>");
                     }
                     break;
-                case "octavio@greenpacecapital.com":
+                case "octavio@opbcapital.com":
                     if (contrasena == "operez")
                     {
                         Response.Write("<script>alert('Accepted');</script>");
@@ -55,7 +55,7 @@ namespace PurchaserPortal1
                         Response.Write("<script>alert('Wrong Password');</script>");
                     }
                     break;
-                case "lorena@greenpacecapital.com":
+                case "lorena@opbcapital.com":
                     if (contrasena == "lmarabotto")
                     {
                         Response.Write("<script>alert('Aceptado');</script>");

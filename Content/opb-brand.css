@@ -1,0 +1,116 @@
+/*
+ * OPB Capital — Brand Stylesheet
+ * Overrides Bootstrap 4 defaults with OPB brand colors.
+ * Load AFTER style.css on every page.
+ */
+
+/* ── Navbar ───────────────────────────────────────────── */
+.bg-opb,
+.navbar.bg-dark {
+    background-color: var(--opb-dark) !important;
+    border-bottom: 3px solid var(--opb-secondary);
+}
+
+.navbar-brand {
+    color: var(--opb-secondary) !important;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.navbar-brand:hover {
+    color: #fff !important;
+}
+
+/* ── Buttons ──────────────────────────────────────────── */
+.btn-opb,
+.btn-primary {
+    background-color: var(--opb-primary) !important;
+    border-color: var(--opb-primary) !important;
+    color: #fff !important;
+    font-weight: 600;
+}
+
+.btn-opb:hover,
+.btn-primary:hover {
+    background-color: var(--opb-secondary) !important;
+    border-color: var(--opb-secondary) !important;
+    color: #fff !important;
+}
+
+/* ── Links ────────────────────────────────────────────── */
+a {
+    color: var(--opb-primary);
+}
+
+a:hover {
+    color: var(--opb-secondary);
+}
+
+/* ── Page background ──────────────────────────────────── */
+body {
+    background-color: var(--opb-light);
+    color: var(--opb-text);
+}
+
+/* ── Cards ────────────────────────────────────────────── */
+.card {
+    border: 1px solid #dde2ea;
+}
+
+.card-footer {
+    background-color: var(--opb-light);
+    border-top: 1px solid #dde2ea;
+}
+
+/* ── Alert success (new projects banner) ─────────────── */
+.alert-success {
+    background-color: #e8f0fa;
+    border-color: var(--opb-primary);
+    color: var(--opb-primary);
+}
+
+/* ── Footer ───────────────────────────────────────────── */
+footer p {
+    color: var(--opb-text);
+    font-size: 0.85rem;
+}
+
+/* ── Progress bars (Dashboard) ───────────────────────── */
+.progress-bar.bg-blue {
+    background-color: var(--opb-primary) !important;
+}
+
+.icon.bg-blue {
+    background-color: var(--opb-primary) !important;
+}
+
+.no.text-blue {
+    color: var(--opb-primary) !important;
+}
+
+/* ── Grid header (PuchaserProjects) ──────────────────── */
+.Grid th {
+    background: var(--opb-primary);
+}
+
+.Grid .pgr {
+    background: var(--opb-primary);
+}
+
+/* ── Form submit button (PurchaseForm) ───────────────── */
+.btn-lg.btn-primary {
+    background-color: var(--opb-primary) !important;
+    border-color: var(--opb-primary) !important;
+}
+
+.btn-lg.btn-primary:hover {
+    background-color: var(--opb-secondary) !important;
+    border-color: var(--opb-secondary) !important;
+}
+
+/* ── Login button ────────────────────────────────────── */
+.btn-lg[id$="Button1"] {
+    background-color: var(--opb-primary) !important;
+    border-color: var(--opb-primary) !important;
+    color: #fff !important;
+}
