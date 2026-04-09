@@ -299,13 +299,13 @@ publish/
 ├── Scripts/              ← JS
 ├── *.aspx                ← Páginas web
 ├── Web.config            ← Configuración IIS
-└── PurchaserPortal1.SetParameters.xml
+└── InvestorPortal.SetParameters.xml
 ```
 
 ### 7.3 Publicación por CLI (MSBuild)
 
 ```bash
-msbuild PurchaserPortal1.csproj \
+msbuild InvestorPortal.csproj \
   /p:Configuration=Release \
   /p:DeployOnBuild=true \
   /p:WebPublishMethod=Package \
@@ -351,19 +351,22 @@ Genera un único archivo `InvestorPortal.zip` desplegable con Web Deploy.
 
 ### 7.6 Checklist pre-distribución
 
-- [ ] Rebranding completo a OPB Capital aplicado
-- [ ] Colores OPB Brand implementados en CSS
-- [ ] Credenciales hardcodeadas eliminadas del código
-- [ ] Base de datos creada y con datos seed
-- [ ] Todas las páginas con autenticación/autorización
-- [ ] AdminView funcional (guardar/cargar)
-- [ ] Alertas dinámicas conectadas a DB
-- [ ] PurchaseForm submit funcional
-- [ ] Página de Logout implementada
-- [ ] Site.Master adoptado en todas las páginas
-- [ ] `debug="false"` en Web.config
-- [ ] SSL configurado en IIS
-- [ ] Build de Release sin errores ni warnings
+- [x] Rebranding completo a OPB Capital aplicado (Sprint 1)
+- [x] Colores OPB Brand implementados en CSS (Sprint 2 — opb-brand.css)
+- [x] Credenciales hardcodeadas movidas a Web.config appSettings (Sprint 3); reemplazar con DB en producción
+- [x] Esquema de base de datos creado en App_Data/schema.sql (Sprint 4)
+- [x] Todas las páginas con autenticación/autorización — BasePage / AdminBasePage (Sprint 3)
+- [x] AdminView funcional — cargar / guardar comprador, checkboxes de notificación (Sprint 5)
+- [x] Alertas dinámicas conectadas a DB via NotificationRepository (Sprint 5)
+- [x] PurchaseForm submit conectado a UserProjectRepository.Reserve() (Sprint 5)
+- [x] Página de Logout implementada (Sprint 3)
+- [x] Site.Master adoptado en todas las páginas (Sprint 6)
+- [x] Web.Release.config aplica `debug="false"` y `customErrors` al publicar (Sprint 7)
+- [x] Error.aspx creado como destino de customErrors (Sprint 7)
+- [ ] Connection string de producción configurada en Web.Release.config (`PROD_SERVER`)
+- [ ] SSL configurado en IIS (paso de infraestructura — fuera del código)
+- [ ] `schema.sql` ejecutado en servidor SQL de producción
+- [ ] Build de Release sin errores ni warnings — ejecutar `msbuild /p:Configuration=Release`
 - [ ] Prueba smoke en ambiente de staging
 
 ---

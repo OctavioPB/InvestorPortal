@@ -19,7 +19,7 @@
 </asp:Panel>
 
 <div class="container" style="text-align:center; padding-top:90px;">
-    <img src="../Images/GPC_logo_black.png" class="img-fluid" style="max-height:180px" />
+    <img src="../Images/opb_logo.png" class="img-fluid" style="max-height:180px" />
     <h2>Welcome <asp:Label ID="name" runat="server" Text=""></asp:Label></h2><br />
 </div>
 

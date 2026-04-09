@@ -106,6 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Pages\AdminView.aspx" />
+    <Content Include="Pages\Error.aspx" />
     <Content Include="Pages\Login.aspx" />
     <Content Include="Pages\Logout.aspx" />
 
@@ -149,9 +150,8 @@
     <Content Include="Images\dollar.png" />
     <Content Include="Images\edit.png" />
     <Content Include="Images\facebook.png" />
-    <Content Include="Images\GPC_logo_black.png" />
     <Content Include="Images\linkedin.png" />
-    <Content Include="Images\logogpc.jpg" />
+    <Content Include="Images\opb_logo.png" />
     <Content Include="Images\save-money.png" />
     <Content Include="Images\stopwatch.png" />
     <Content Include="Images\upload.png" />
@@ -203,6 +203,10 @@
     <Compile Include="Infrastructure\BasePage.cs" />
     <Compile Include="Models\Project.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Pages\Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Pages\Logout.aspx.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -287,9 +291,9 @@
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <None Include="Web.Release.config">
+    <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
-    </None>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
