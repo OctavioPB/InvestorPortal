@@ -2,6 +2,7 @@ using System;
 using System.Configuration;
 using System.Drawing;
 using System.Web.UI;
+using PurchaserPortal1.Data;
 
 namespace PurchaserPortal1
 {
@@ -14,29 +15,72 @@ namespace PurchaserPortal1
             var email    = user.Text.Trim().ToLower();
             var password = pass.Text;
 
+            if (Database.IsConfigured)
+                AuthenticateWithDatabase(email, password);
+            else
+                AuthenticateWithConfig(email, password);
+        }
+
+        // ── DB authentication (Sprint 4+) ────────────────────────────────
+        private void AuthenticateWithDatabase(string email, string password)
+        {
+            var dbUser = UserRepository.GetByEmail(email);
+
+            if (dbUser == null)
+            {
+                ShowError("User not found.");
+                return;
+            }
+
+            if (!PasswordHelper.Verify(password, dbUser.PasswordHash, dbUser.Salt))
+            {
+                ShowError("Wrong password.");
+                return;
+            }
+
+            Session["UserId"] = dbUser.UserId;
+            Session["Name"]   = dbUser.FullName;
+            Session["Role"]   = dbUser.Role;
+
+            Redirect(dbUser.Role);
+        }
+
+        // ── Web.config fallback (development / pre-DB) ───────────────────
+        private void AuthenticateWithConfig(string email, string password)
+        {
             var credentials = ConfigurationManager.AppSettings["auth_" + email];
 
             if (credentials == null)
             {
-                Label3.Text      = "User not found.";
-                Label3.ForeColor = Color.Red;
+                ShowError("User not found.");
                 return;
             }
 
-            // Format stored in Web.config: password|Role|Full Name
+            // Format: password|Role|Full Name
             var parts = credentials.Split('|');
 
             if (parts[0] != password)
             {
-                Label3.Text      = "Wrong password.";
-                Label3.ForeColor = Color.Red;
+                ShowError("Wrong password.");
                 return;
             }
 
             Session["Name"] = parts[2];
             Session["Role"] = parts[1];
 
-            if (parts[1] == "Admin")
+            Redirect(parts[1]);
+        }
+
+        // ── Helpers ──────────────────────────────────────────────────────
+        private void ShowError(string message)
+        {
+            Label3.Text      = message;
+            Label3.ForeColor = Color.Red;
+        }
+
+        private void Redirect(string role)
+        {
+            if (role == "Admin")
                 Response.Redirect("~/Pages/AdminView.aspx");
             else
                 Response.Redirect("~/Pages/PurchaserPortal.aspx");

@@ -60,68 +60,36 @@
   <strong>New projects are available for you</strong> Take action before someone else take these deals.<br />
 </div>
             <div class="card-group">
-  <div class="card">
-      <br />
-    <img src="../Images/solar4.jpg" class="card-img-top" style="width:400px; height:200px; text-align:center; align-items:center; align-self:center;"/>
-    <div class="card-body">
-      <h5 class="card-title" style="text-align:center;">Project 485</h5>
-      <p class="card-text">
-          <b>Project Name:</b> Lux Art Institute <br />
-          <b>Project Type:</b> PPA<br />
-          <b>Location:</b> Encinitas, CA<br />
-          <b>ITC Value:</b> 81,442 $<br />
-      </p>
-        <div style="text-align:center;">
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Get It" style="background-color: #003366; color: #FFFFFF; text-align:center; font-weight: bold" class="btn btn-default"/>
-    </div>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated <%: DateTime.Today.ToShortDateString() %></small>
-    </div>
-  </div>
-  <div class="card">
-      <br />
-    <img src="../Images/solar5.jpg" class="card-img-top" style="width:400px; height:200px; text-align:center; align-items:center; align-self:center;"/>
-    <div class="card-body">
-      <h5 class="card-title" style="text-align:center;">Project 462</h5>
-      <p class="card-text">          
-          
-          <b>Project Name:</b> First Baptist Church of Chula Vista<br />
-          <b>Project Type:</b> PPA<br />
-          <b>Location:</b> Chula Vista, CA<br />
-          <b>ITC Value:</b> 35,287 $ <br />
-
-      </p>
-
-        <div style="text-align:center;">
-        <asp:Button ID="Button2" runat="server" Text="Get It" style="background-color: #003366; color: #FFFFFF; text-align:center; font-weight: bold" class="btn btn-default" OnClick="Button2_Click" />
-    </div>
-    </div>  
-    <div class="card-footer">
-      <small class="text-muted">Last updated <%: DateTime.Today.ToShortDateString() %></small>
-    </div>
-  </div>
-  <div class="card">
-      <br />
-    <img src="../Images/solar6.jpg" class="card-img-top" style="width:400px; height:200px; text-align:center; align-items:center; align-self:center;"/>
-    <div class="card-body">
-      <h5 class="card-title" style="text-align:center;">Project 468</h5>
-      <p class="card-text">
-          <b>Project Name:</b> New Life Community Adventist Church<br />
-          <b>Project Type:</b> Prepay<br />
-          <b>Location:</b> Napa<br />
-          <b>ITC Value:</b> 10,860 $<br />
-
-      </p>
-
-        <div style="text-align:center;">
-        <asp:Button ID="Button3" runat="server" Text="Get It" style="background-color: #003366; color: #FFFFFF; text-align:center; font-weight: bold" class="btn btn-default" OnClick="Button3_Click"/>
-    </div>
+  <asp:Repeater ID="rptProjects" runat="server" OnItemCommand="rptProjects_ItemCommand">
+    <ItemTemplate>
+      <div class="card">
+        <br />
+        <img src='<%# "../Images/" + Eval("ImageUrl") %>'
+             class="card-img-top"
+             style="width:400px; height:200px; text-align:center; align-items:center; align-self:center;" />
+        <div class="card-body">
+          <h5 class="card-title" style="text-align:center;">Project <%# Eval("ProjectId") %></h5>
+          <p class="card-text">
+            <b>Project Name:</b> <%# Eval("Name") %><br />
+            <b>Project Type:</b> <%# Eval("DealType") %><br />
+            <b>Location:</b> <%# Eval("Location") %><br />
+            <b>ITC Value:</b> <%# string.Format("{0:N0}", Eval("ITCValue")) %> $<br />
+          </p>
+          <div style="text-align:center;">
+            <asp:Button ID="btnGetProject" runat="server"
+                        Text="Get It"
+                        CommandName="Select"
+                        CommandArgument='<%# Eval("ProjectId") %>'
+                        style="background-color:#003366; color:#FFFFFF; text-align:center; font-weight:bold"
+                        class="btn btn-default" />
+          </div>
         </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated <%: DateTime.Today.ToShortDateString() %></small>
-    </div>
-  </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated <%: DateTime.Today.ToShortDateString() %></small>
+        </div>
+      </div>
+    </ItemTemplate>
+  </asp:Repeater>
 </div>
     <%--Cards end--%>
             <br />

@@ -112,6 +112,7 @@
     <Content Include="Pages\PurchaseForm.aspx" />
     <Content Include="Pages\PurchaserDashboard.aspx" />
     <Content Include="Pages\PurchaserPortal.aspx" />
+    <Content Include="App_Data\schema.sql" />
     <Content Include="Content\opb-brand.css" />
     <Content Include="Content\bootstrap2.css" />
     <Content Include="Content\deskapp.css" />
@@ -192,8 +193,14 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Database.cs" />
+    <Compile Include="Data\PasswordHelper.cs" />
+    <Compile Include="Data\ProjectRepository.cs" />
+    <Compile Include="Data\UserRepository.cs" />
     <Compile Include="Infrastructure\AdminBasePage.cs" />
     <Compile Include="Infrastructure\BasePage.cs" />
+    <Compile Include="Models\Project.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Pages\Logout.aspx.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
